@@ -750,7 +750,7 @@ else:
 file_name += ".csv"
 
 sys.stdout.flush()
-solution = solve_ivp(system_of_odes, t_span, C0, t_eval=t_eval, args=(ode_functions,), method='RK45')
+solution = solve_ivp(system_of_odes, t_span, C0, t_eval=t_eval, args=(ode_functions,), method='RK45', max_step=0.001)
 
 
 # Save the results to a CSV file
